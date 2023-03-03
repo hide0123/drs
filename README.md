@@ -30,7 +30,14 @@ pip install dotenv line-bot-sdk selenium chromedriver-binary==Chromeのバージ
 
 ## 補足
 
-* `HEADLESS`を`False`に設定すると，Chromeのウィンドウで動作を確認できます．
+* cronを用いて定期実行することも可能です．定期実行する場合は`crontab -e`でcrontabを開き，以下のように記述してください．（パスはdrsのパスに置き換える）
+
+  ```bash
+  0 7 * * * cd /path/to/drs && ./run.sh
+  10 19 * * * cd /path/to/drs && ./stop.sh
+  ```
+
+* `main.py`内にある`HEADLESS`を`False`に設定すると，Chromeのウィンドウで動作を確認できます．
 * スクレイピングやアクセスの間隔を変更する場合は，常識の範囲内で行ってください．（変更によって発生する問題については一切責任を負いません．）
 
 ## ライセンス
