@@ -65,7 +65,7 @@ def main():
 
       free = driver.find_elements(By.XPATH, "//td[@class='Free']")
 
-      if len(free) > 0 and set(free) != set(prev_free):
+      if len(free) > 0 and len(prev_free) == 0:
         print("Free detected!:   ", time.ctime())
         messages = TextSendMessage(text="予約に空きがあります！\n" + URL)
         line_bot_api.broadcast(messages=messages)
