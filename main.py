@@ -80,7 +80,7 @@ if __name__ == '__main__':
   dt_now = datetime.datetime.now()
 
   if dt_now.hour < 7 or dt_now.hour >= 19:
-    print("Error: Out of hours")
+    print("Error: Out of hours (" + time.ctime() + ")" )
     sys.exit(1)
 
   main()

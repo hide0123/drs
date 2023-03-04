@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm nohup.out
-nohup python3 -u main.py &
+rm -f drs.log
+$1 python3 -u main.py > drs.log &

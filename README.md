@@ -25,7 +25,7 @@ pip install dotenv line-bot-sdk selenium chromedriver-binary==Chromeのバージ
   * `PASS`：対象の教習所予約システムのログインパスワード
   * `LINE_CHANNEL_ACCESS_TOKEN`：LINE Developersのチャンネルアクセストークン
 
-2. `./run.sh`を実行してください（起動可能時刻でない場合は起動できません）．ログは`nohup.out`に出力されます．
+2. `./run.sh`を実行してください（起動可能時刻でない場合は起動できません）．nohupで実行する場合は`./run.sh nohup`とします．ログは`drs.log`に出力されます．
 3. 終了する場合は，`./stop.sh`を実行してください．
 
 ## 補足
