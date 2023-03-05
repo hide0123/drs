@@ -5,7 +5,7 @@
 
 ## 詳細
 
-* 7:00~19:00の間に予約に空きが発生した場合にLINEで通知します．
+* 予約に空きが発生した場合にLINEで通知します．
 * 情報は2分半毎に更新されます．
 
 ## 依存関係のインストール
@@ -21,6 +21,8 @@ pip install python-dotenv line-bot-sdk selenium chromedriver-binary==Chromeの�
 1. `.env`ファイルを作成し，以下の環境変数を設定してください．
 
   * `URL`：対象の教習所予約システムのログインページのURL
+  * `START_TIME`：開始時刻
+  * `END_TIME`：終了時刻
   * `ID`：対象の教習所予約システムのログインID
   * `PASS`：対象の教習所予約システムのログインパスワード
   * `LINE_CHANNEL_ACCESS_TOKEN`：LINE Developersのチャンネルアクセストークン

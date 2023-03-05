@@ -15,6 +15,8 @@ HEADLESS = True
 dotenv.load_dotenv()
 
 URL = os.getenv('URL')
+START_TIME = int(os.getenv('START_TIME'))
+END_TIME = int(os.getenv('END_TIME'))
 ID = os.getenv('ID')
 PASS = os.getenv('PASS')
 CHANNEL_ACCESS_TOKEN = os.getenv('CHANNEL_ACCESS_TOKEN')
@@ -60,7 +62,7 @@ def main():
     while True:
       dt_now = datetime.datetime.now()
 
-      if dt_now.hour < 7 or dt_now.hour >= 19:
+      if dt_now.hour < START_TIME or dt_now.hour >= END_TIME:
         break
 
       free = driver.find_elements(By.XPATH, "//td[@class='Free']")
@@ -79,7 +81,7 @@ def main():
 if __name__ == '__main__':
   dt_now = datetime.datetime.now()
 
-  if dt_now.hour < 7 or dt_now.hour >= 19:
+  if dt_now.hour < START_TIME or dt_now.hour >= END_TIME:
     print("Error: Out of hours (" + time.ctime() + ")" )
     sys.exit(1)
 
