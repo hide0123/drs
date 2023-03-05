@@ -13,7 +13,7 @@
 Chromeをインストール後，以下のコマンドで依存関係をインストールしてください．
 
 ```bash
-pip install dotenv line-bot-sdk selenium chromedriver-binary==Chromeのバージョン
+pip install python-dotenv line-bot-sdk selenium chromedriver-binary==Chromeのバージョン
 ```
 
 ## 使い方
