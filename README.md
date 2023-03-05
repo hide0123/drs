@@ -21,8 +21,8 @@ pip install python-dotenv line-bot-sdk selenium chromedriver-binary==Chromeの�
 1. `.env`ファイルを作成し，以下の環境変数を設定してください．
 
   * `URL`：対象の教習所予約システムのログインページのURL
-  * `START_TIME`：開始時刻
-  * `END_TIME`：終了時刻
+  * `START_TIME`：開始時刻（1時間単位）
+  * `END_TIME`：終了時刻（1時間単位）
   * `ID`：対象の教習所予約システムのログインID
   * `PASS`：対象の教習所予約システムのログインパスワード
   * `LINE_CHANNEL_ACCESS_TOKEN`：LINE Developersのチャンネルアクセストークン
@@ -35,8 +35,8 @@ pip install python-dotenv line-bot-sdk selenium chromedriver-binary==Chromeの�
 * cronを用いて定期実行することも可能です．定期実行する場合は`crontab -e`でcrontabを開き，以下のように記述してください．（パスはdrsのパスに置き換える）
 
   ```bash
-  0 7 * * * cd /path/to/drs && ./run.sh
-  10 19 * * * cd /path/to/drs && ./stop.sh
+  0 17 * * * cd /path/to/drs && ./run.sh # 17時に起動
+  30 19 * * * cd /path/to/drs && ./stop.sh # 19時30分に終了
   ```
 
 * `main.py`内にある`HEADLESS`を`False`に設定すると，Chromeのウィンドウで動作を確認できます．
